@@ -20,7 +20,7 @@ class GreetingsFragment: Fragment() {
         val button = view.findViewById<ImageButton>(R.id.scan_button)
 
         button.setOnClickListener {
-            requireFragmentManager().beginTransaction()
+            parentFragmentManager.beginTransaction()
                 .addToBackStack(null)
                 .replace(R.id.fragmentContainer, ScanResultFragment())
                 .commitAllowingStateLoss()
